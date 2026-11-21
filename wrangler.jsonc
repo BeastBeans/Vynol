@@ -1,0 +1,21 @@
+{
+  // VYNOL – Einstellungen für Cloudflare
+  "name": "vynol",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  // E-Mail-Versand für das Anfrageformular (Cloudflare Email Routing)
+  "send_email": [
+    { "name": "MAIL", "destination_address": "surfinparts@proton.me" }
+  ],
+  "vars": {
+    // Absender: eine Adresse auf deiner Domain (muss nicht existieren)
+    "ABSENDER": "anfrage@vynolfolierungen.de",
+    // Empfänger: dein Postfach (muss in Email Routing bestätigt sein)
+    "EMPFAENGER": "surfinparts@proton.me"
+  }
+}
